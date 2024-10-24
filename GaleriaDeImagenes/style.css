@@ -1,0 +1,68 @@
+
+
+.galeria {
+    display: flex;   /* Se aplica el display para tener una comodidad mejor al tiempo de vizualizar la pagina */  
+    flex-wrap: wrap; /* aplicamos el cpontrol de desbordamiento a multiples lineas usando wrap  */
+    justify-content: center; /* Alineamos los elementos del contenedor  a el centro */
+    gap: 10px; /* luego hacemos un espacio entre los elementos usando gap y se le agregan 10 px */
+    max-width: 800px; /* se le agrega un ancho maximo de 800px */
+    margin: 0 auto; /* Se establece una margen inferior o superior a 0 */
+}
+
+
+
+
+
+.galeria img {
+    width: 23%; /* Le damos un ancho especifico a la imagen de 23% */
+    height: auto; /* en el height se establece una altura en automatico segun el contenido  */
+    object-fit: cover; /* Se ajusta la imagen para cubrir el contenedor recortando las areas que no encajan */
+}
+
+
+.galeria img {
+    border-radius: 5px; /* Se agrega un borde redondo de 5px  */
+    box-shadow: 0px 5px 50px rgba(25, 245, 5, 0.2);/* Se agrega a la imagen efectos de sombra de color verde */
+    transition: all 0.5s ease;/* en la transicion se agrega una animacion de 0.5 seg  */
+}
+
+
+@media (max-width: 768px) {
+    .galeria img {
+        width: 48%;                               
+    }
+}                                              
+
+/* La media en este apartado y lineas de 
+codigo ayuda a decidir puntos de interrupcion para ajustar el diseño de la pagina en este caso la galeria de imagenes para cuando este se presente en diferentes dispositivos */
+
+
+@media (max-width: 480px) {
+    .galeria img {
+        width: 95%; 
+    }
+}
+
+
+/* En la seleccion de etiqueta body se agrega una imagen de fondo a detalle con el back */
+body{ 
+    background-image:url(Background.jpg); /* en la seleccion de etiqueta body se agrega una imagen de fondo a detalle */
+    background-size: 1900px; /* se define el tamaño del background*/
+    
+
+
+    
+    
+}
+
+h3 {
+    font-weight: 200; /* El ancho de las lineas de texto */
+    color:turquoise ; /* a el texto se le agrega el color turquesa */
+    text-align: center; /* el texto se alinea a el centro de la pagina */
+    font-size: 100px;  /* le damos un tamaño a el texto de 100px */
+    
+}
+
+img:hover {
+    transform: scale(1.1); /* (Este es un gustico) al momento de pasar el cursor encima de las imagenes las imagenen se agrandan */
+}
